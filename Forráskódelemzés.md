@@ -1,0 +1,45 @@
+# Project-Work-Feedback-App
+Team 1 KhanDan 
+
+Description
+Én mint a gyakornoki program mentora, szeretném ha a csapat ismerné és értené a Feedback app érdekes folyamatainak működését. Ehhez szeretném, ha a csapat egyik tagja felfedezné a projectben használt Flyway adatbázis migrációs eszközt: 
+
+Adatbázis migráció kutatómunka 
+Flyway használata kutatómunka 
+Flyway használata a Feedback app projectben 
+Dokumentáció készítése  
+Prezentálás a fejlesztői csapat számára 
+Subtaskok: 
+
+Adatbázis migráció kutatómunka  
+A kutatómunka célja az alábbi kérdések megválaszolása: 
+Mit jelent az adatbázis migráció? 
+Mikor lehet szükség a használatára? 
+Milyen eszközök közül választhatunk és ezeknek mik az előnyei/hátrányai? 
+Flyway kutatómunka 
+A kutatómunka célja az alábbi kérdések megválaszolása: 
+Mi a Flyway és milyen lehetőségeket kínál? 
+Hogyan köthető be olyan alkalmazásba, ami már rendelkezik adatokkal? 
+Mit jelent a baseline script? 
+Hogyan változik meg egy entity módosításának folyamata Flyway használatával? 
+Flyway használata a Feedback app projectben 
+A kutatómunka célja az alábbi kérdések megválaszolása: 
+Hogyan került bekötésre a Flyway az alkalmazásba? 
+Milyen beállításokkal használjuk? 
+Mi az a flyway_schema_history tábla és mi a tartalma? 
+Hogyan és miért használjuk a generate_changelog.sh-t? 
+Milyen fajta módosítások történtek eddig? (nem kell mind, elég egy-egy példa) 
+Hogyan változik meg egy entity módosításának folyamata Flyway használatával? 
+Dokumentáció készítése 
+Az eddig elkészült jegyzetből dokumentáció szerkesztése az alábbi tartalommal: 
+Adatbázis migráció  
+Flyway 
+Flyway használata a Feedback appban 
+Hogyan használjuk a jövőben a Flyway-t? (generate_changelog.sh, sprint verzió, ticket szám) 
+Prezentálás a fejlesztői csapat számára 
+A prezentáció célja, hogy a csapat minden tagja értse és átlássa a Flyway használatát a Feedback appban és szükség esetén tudja használni. 
+A prezentáció tartalmazza: 
+Bevezetés az adatbázis migrációba 
+Flyway használata általánosságban 
+Flyway használata a Feedback appban 
+Jövőbeli használat útmutató 
