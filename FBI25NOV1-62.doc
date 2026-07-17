@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>[#FBI25NOV1-62] Mennyi időt töltöttél az alfeladatokkal?</title>
+    <meta http-equiv="Content-Type" Content="application/vnd.ms-word; charset=UTF-8">
+        <style type="text/css">
+
+.tableBorder, .grid
+{
+    background-color: #fff;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tableBorder td, .grid td
+{
+    vertical-align: top;
+    padding: 2px;
+    border: 1px solid #ccc;
+}
+
+.noPadding
+{
+    padding: 0 !important;
+}
+
+h3 .subText
+{
+    font-size: 60%;
+    font-weight: normal;
+}
+
+.tabLabel
+{
+    font-weight: bold;
+    border: 1px solid #ccc;
+    border-bottom:none;
+    padding: 2px;
+    display: inline;
+}
+
+td.blank
+{
+    padding: 0;
+    margin: 0;
+}
+
+.blank td
+{
+    border: none;
+}
+
+#descriptionArea
+{
+    margin: 0;
+    padding: 2px;
+    border: 1px solid #ccc;
+}
+
+hr
+{
+    border-top:1px solid #aaa;
+}
+
+hr.fullcontent
+{
+  height: 15px;
+  padding: 10px 0;
+  background: #fff url('https://jira.progmasters.hu/images/icons/hr.gif') no-repeat scroll center;
+}
+
+</style>
+
+</head>
+<body>
+
+<table class="tableBorder" cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td bgcolor="#f0f0f0" width="100%" colspan="2" valign="top">
+                            <b><a id="parent_issue_summary" href="https://jira.progmasters.hu/browse/FBI25NOV1-19">Flyway a Feedback app projectben </a></b>
+                <span style="font-size: 9px">(<a id="parent_issue_key" href="https://jira.progmasters.hu/browse/FBI25NOV1-19">FBI25NOV1-19</a>)</span>
+                <h3 class="formtitle"><img src="https://jira.progmasters.hu/images/icons/link_out_bot.gif" width="16" height="16" />
+                        [FBI25NOV1-62]&nbsp;<a href="https://jira.progmasters.hu/browse/FBI25NOV1-62">Mennyi időt töltöttél az alfeladatokkal?</a>
+            <span class="subText">
+               Created: 2026-Jul-17                   &nbsp;Updated: 2026-Jul-17
+
+                                    &nbsp;Due: 2026-Jul-20
+                                            </span>
+            </h3>
+        </td>
+    </tr>
+    <tr>
+        <td width="20%"><b>Status:</b></td>
+        <td width="80%">To Do</td>
+    </tr>
+    <tr>
+        <td width="20%"><b>Project:</b></td>
+        <td width="80%"><a href="https://jira.progmasters.hu/secure/BrowseProject.jspa?id=12979">2025NovFS-FBI-Team1</a></td>
+    </tr>
+
+        <tr>
+            <td><b>Component/s:</b></td>
+            <td>
+                            None
+                </td>
+    </tr>
+    
+
+        <tr>
+            <td><b>Affects Version/s:</b></td>
+            <td>
+                            None
+                </td>
+    </tr>
+    
+
+        <tr>
+            <td><b>Fix Version/s:</b></td>
+            <td>
+                            None
+                </td>
+    </tr>
+    
+    </table>
+
+<br />
+<table class="grid" cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td bgcolor="#f0f0f0" valign="top" width="20%">
+            <b>Type:</b>
+        </td>
+        <td bgcolor="#ffffff" valign="top"  width="30%" >
+            Sub-task
+        </td>
+
+                    <td bgcolor="#f0f0f0">
+                <b>Priority:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" nowrap>
+                Medium
+            </td>
+            </tr>
+    <tr>
+                        <td bgcolor="#f0f0f0" valign="top" width="20%">
+                <b>Reporter:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top"  width="30%" >
+                                            <a class="user-hover" rel="ginarubik" id="word_reporter_ginarubik" href="https://jira.progmasters.hu/secure/ViewProfile.jspa?name=ginarubik">Gina Rubik</a>
+                            </td>
+        
+                    <td bgcolor="#f0f0f0" width="20%">
+                <b>Assignee:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" nowrap  width="30%" >
+                                            <a class="user-hover" rel="ginarubik" id="word_assignee_ginarubik" href="https://jira.progmasters.hu/secure/ViewProfile.jspa?name=ginarubik">Gina Rubik</a>
+                            </td>
+            </tr>
+    	<tr>
+		<td bgcolor="#f0f0f0" width="20%">
+			<b>Resolution:</b>
+		</td>
+		<td bgcolor="#ffffff" valign="top" width="30%" nowrap>
+            				Unresolved
+                    </td>
+                    <td bgcolor="#f0f0f0" width="20%">
+                <b>Votes:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" width="30%" nowrap>
+                0
+            </td>
+        
+    </tr>
+    
+        <tr>
+        <td bgcolor="#f0f0f0" width="20%">
+            <b>Labels:</b>
+        </td>
+        <td id="labels-48620-value" class="value" bgcolor="#ffffff" valign="top" colspan="3" nowrap>
+                            None
+                    </td>
+    </tr>
+    
+    	<tr>
+        		<td bgcolor="#f0f0f0" width="20%"><b>Remaining Estimate:</b></td>
+        <td bgcolor="#ffffff" valign="top" nowrap width="80%" colspan="3">
+                            Not Specified
+            		</td>
+    </tr>
+    <tr>
+                <td bgcolor="#f0f0f0" width="20%"><b>Time Spent:</b></td>
+		<td bgcolor="#ffffff" valign="top" nowrap width="80%" colspan="3">
+                            Not Specified
+            		</td>
+	</tr>
+    <tr>
+                <td bgcolor="#f0f0f0" width="20%"><b>Original Estimate:</b></td>
+		<td bgcolor="#ffffff" valign="top" nowrap width="80%" colspan="3">
+                            Not Specified
+            		</td>
+    </tr>
+    
+    </table>
+
+
+
+    <br />
+
+    	<table class="grid" cellpadding="0" cellspacing="0" border="0" width="100%">
+            
+
+                <tr>
+            <td bgcolor="#f0f0f0" width=20% valign=top>
+                <b>Attachments:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top">
+                                    <img src="https://jira.progmasters.hu/images/icons/attach/image.gif" height="16" width="16" border="0" alt="PNG File" role="presentation">
+                    jira assignee.PNG &nbsp;&nbsp;&nbsp;
+                            </td>
+        </tr>
+        
+    
+
+
+
+                        <tr>
+                <td bgcolor="#f0f0f0" width="20%" valign="top"><b>Acceptence criteria:</b></td>
+                <td id="customfield_10504-48620-value" class="value" bgcolor="#ffffff" width="80%">
+
+
+
+
+
+            
+        
+        <div id="customfield_10504"
+            class="o-checklist"
+            data-jira-project-key-pattern="([A-Z][A-Z0-9]+)"
+            data-checklist="[]"
+            data-checklist-mode="preview"
+            data-checklist-context="{&quot;abilities&quot;:{&quot;canComplete&quot;:true,&quot;canEdit&quot;:true,&quot;canImportTemplates&quot;:true,&quot;canCreateTemplates&quot;:true},&quot;appParameters&quot;:{&quot;historyDateFormat&quot;:&quot;yyyy-MM-dd HH:mm Z&quot;,&quot;allowProjectAdminsToConfigure&quot;:false,&quot;cleverChangelog&quot;:true,&quot;validateGlobalItems&quot;:true,&quot;showContactSupport&quot;:false,&quot;allowIssueConversion&quot;:true,&quot;showChecklistsInAgileDetailsView&quot;:true,&quot;showProvideFeedback&quot;:true},&quot;canConvertToSubtask&quot;:false,&quot;canLinkIssues&quot;:true,&quot;view&quot;:&quot;DEFAULT&quot;,&quot;fieldType&quot;:&quot;CHECKLIST&quot;,&quot;savesOnEdit&quot;:false,&quot;issueKey&quot;:&quot;FBI25NOV1-62&quot;,&quot;projectId&quot;:12979,&quot;projectKey&quot;:&quot;FBI25NOV1&quot;,&quot;issueId&quot;:48620,&quot;customFieldId&quot;:&quot;customfield_10504&quot;,&quot;fieldConfigId&quot;:11306,&quot;isTemplateView&quot;:false,&quot;isGlobalItemsView&quot;:false,&quot;isDefaultItemsView&quot;:false,&quot;id&quot;:10504,&quot;statuses&quot;:[],&quot;parameters&quot;:{&quot;version&quot;:5,&quot;discretionaryOptionIds&quot;:[],&quot;statusCsv&quot;:&quot;notApplicable, N/A, Default, Complete, Keep\r\ninProgress, In Progress, Current, Incomplete, Remove\r\nblocked, Blocked, Error, Incomplete, Remove&quot;,&quot;showStatusMenu&quot;:false,&quot;allowLocalItems&quot;:true,&quot;allowMandatory&quot;:true,&quot;lockOnResolution&quot;:true,&quot;canConvertToIssue&quot;:true,&quot;canBulkEdit&quot;:true,&quot;canBulkComplete&quot;:true,&quot;issueLinkType&quot;:null,&quot;canAssignUsers&quot;:false,&quot;canSetDueDate&quot;:false,&quot;canSetPriority&quot;:false,&quot;enableAdvancedMarkdown&quot;:false,&quot;enableExternalAssetLinking&quot;:false,&quot;enableHeaderItems&quot;:true,&quot;enableHeaderItemCollapsing&quot;:true,&quot;showHeaderItemSummaries&quot;:true,&quot;collapseHeaderItemsByDefault&quot;:false,&quot;defaultMandatoryState&quot;:true,&quot;showProgressHeaderInReadOnlyView&quot;:true,&quot;showProgressHeaderInEditView&quot;:true,&quot;strikeThrough&quot;:true,&quot;showMore&quot;:false,&quot;showMoreCount&quot;:0,&quot;alwaysShowEmptyChecklist&quot;:true,&quot;alwaysShowUncheckedChecklist&quot;:true,&quot;hideUncheckedInReadonlyView&quot;:false,&quot;issueViewDisplayMode&quot;:&quot;CustomField&quot;,&quot;summarySource&quot;:&quot;AllItems&quot;,&quot;bannerParameters&quot;:{&quot;completedLabel&quot;:&quot;&quot;,&quot;allMandatoryLabel&quot;:&quot;&quot;,&quot;incompleteLabel&quot;:&quot;&quot;,&quot;emptyLabel&quot;:&quot;&quot;,&quot;type&quot;:&quot;Progression&quot;,&quot;appearance&quot;:&quot;Normal&quot;},&quot;assigneeDisplay&quot;:&quot;Avatar&quot;,&quot;descriptionDisplay&quot;:&quot;LinkUnderItem&quot;,&quot;compactView&quot;:false,&quot;reporterCanEdit&quot;:true,&quot;allCanComplete&quot;:true,&quot;limitEditionWithRoles&quot;:false,&quot;editRoleIds&quot;:[],&quot;canImportTemplateIntoChecklist&quot;:true,&quot;canCreateTemplateFromChecklist&quot;:true,&quot;createTemplateFromChecklistRoleIds&quot;:[],&quot;useConfluenceRenderer&quot;:true},&quot;proxyParameters&quot;:null}"
+            data-checklist-userstore="[{&quot;userName&quot;:&quot;ginarubik&quot;,&quot;displayName&quot;:&quot;Gina Rubik&quot;,&quot;email&quot;:&quot;ginarubik@gmail.com&quot;,&quot;avatarURL&quot;:&quot;https://jira.progmasters.hu/secure/useravatar?size=xsmall&amp;avatarId=10335&quot;,&quot;description&quot;:&quot;Gina Rubik - ginarubik@gmail.com (ginarubik)&quot;}]"
+            data-checklist-prioritystore="[{&quot;id&quot;:&quot;1&quot;,&quot;name&quot;:&quot;Highest&quot;,&quot;iconUrl&quot;:&quot;https://jira.progmasters.hu/images/icons/priorities/highest.svg&quot;,&quot;statusColor&quot;:&quot;#d04437&quot;},{&quot;id&quot;:&quot;2&quot;,&quot;name&quot;:&quot;High&quot;,&quot;iconUrl&quot;:&quot;https://jira.progmasters.hu/images/icons/priorities/high.svg&quot;,&quot;statusColor&quot;:&quot;#f15C75&quot;},{&quot;id&quot;:&quot;3&quot;,&quot;name&quot;:&quot;Medium&quot;,&quot;iconUrl&quot;:&quot;https://jira.progmasters.hu/images/icons/priorities/medium.svg&quot;,&quot;statusColor&quot;:&quot;#f79232&quot;},{&quot;id&quot;:&quot;4&quot;,&quot;name&quot;:&quot;Low&quot;,&quot;iconUrl&quot;:&quot;https://jira.progmasters.hu/images/icons/priorities/low.svg&quot;,&quot;statusColor&quot;:&quot;#707070&quot;},{&quot;id&quot;:&quot;5&quot;,&quot;name&quot;:&quot;Lowest&quot;,&quot;iconUrl&quot;:&quot;https://jira.progmasters.hu/images/icons/priorities/lowest.svg&quot;,&quot;statusColor&quot;:&quot;#999999&quot;}]"
+                     >
+            <div class="o-checklist-subcontainer">
+                                    <span class="o-empty-indicator aui-lozenge aui-lozenge-complete">Empty</span>
+                
+                                                    <div class="o-checklist-header"></div>
+    
+                                          
+
+
+
+
+                                      </div>
+        </div>
+    
+</td>
+            </tr>
+            </table>
+
+
+Generated at Fri Jul 17 19:21:02 UTC 2026 by Gina Rubik using Jira 9.4.0#940000-sha1:da47b384f8ed8607e5555de91076441177c9b48c.
+
+</body>
+</html>
