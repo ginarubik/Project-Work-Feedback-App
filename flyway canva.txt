@@ -1,0 +1,259 @@
+
+Időtartam:10–15 perc.
+Nyisd meg a projekt `db/migration` könyvtárát, mutass meg egy meglévő migrációs SQL fájlt és a `flyway_schema_history` tábla tartalmát. Ez sokat segít a működés megértésében.
+Projekt-specifikus részek:** A `generate_changelog.sh`, az `application.yml` Flyway beállításai és a migrációs fájlok nevei a saját Feedback projektedből kerüljenek a prezentációba, hogy a bemutató teljesen a csapat gyakorlatára épüljön
+
+DIA 1 Főcím: A Flyway használata a Feedback alkalmazásban
+
+DIA 2 ROADMAP
+
+1.Az Adatbázis migráció
+
+2.Mi a Flyway?
+
+3.Baseline
+
+4. flyway_schema_history
+
+5.Feedback alkalmazás
+
+6.generate_changelog.sh
+
+7. Új migráció készítése
+
+8.Jövőbeli alkalmazás
+
+
+DIA 3 Mi az adatbázis migráció? az adatbázis szerkezetének verziókövetett módosítása
+
+🗄️ Új tábla
+
+➕
+
+Új oszlop
+
+🔗 Kapcsolatok
+
+⚡ Indexek
+
+📊 Adatmigráció
+
+Alul:
+
+Forráskód
+↓
+
+SQL migráció
+
+↓
+
+Adatbázis
+
+
+DIA 4 Miért van rá szükség?
+
+Régen
+
+👨‍💻
+
+Developer
+
+↓
+
+SQL kézzel
+
+↓
+
+Production
+
+↓
+
+❌ hibák
+
+
+Flyway használatával
+
+👨‍💻
+
+Developer
+
+↓
+
+Git
+
+↓
+
+Flyway
+
+↓
+
+Adatbázis
+
+↓
+
+✅ minden környezet ugyanaz (Jobbra zöld pipa ikon.)
+
+DIA 5 Adatbázis migrációs eszközök
+
+| Eszköz    | Előny              | Hátrány          |
+| --------- | ------------------ | ---------------- |
+| Flyway    | Egyszerű SQL       | Kevés rollback   |
+| Liquibase | Nagyon sok funkció | Összetett        |
+| Hibernate | Gyors fejlesztés   | Nem productionre |
+
+A Feedback projekt Flyway-t használ.
+
+DIA 4. Mi a Flyway? Nyílt forráskódú migrációs eszköz
+
+Feladata:
+
+✔ verziókezelés
+
+✔ migrációk futtatása
+
+✔ adatbázis szinkronizálása
+
+Középen nagy folyamatábra
+
+V1
+
+↓
+
+V2
+
+↓
+
+V3
+
+↓
+
+V4
+
+↓
+Database
+
+DIA 5. Baseline: már létező adatbázis esetén a Flyway innen kezdi a verziókövetést
+
+Bal oldal
+
+Meglévő adatbázis
+↓
+Baseline
+↓
+Flyway indul
+```
+Jobb oldal
+
+Database ikon
+↓
+Baseline zászló
+↓
+Version 1
+
+DIA 6. A flyway_schema_history
+
+A Flyway saját táblája.
+
+Tárolja
+
+✔ verzió
+
+✔ script neve
+
+✔ checksum
+
+✔ futás ideje
+
+✔ sikeres volt-e
+
+Alul egy táblázat
+
+| Version | Script          |
+| ------- | --------------- |
+| 1       | Baseline        |
+| 2       | Create User     |
+| 3       | Add Email       |
+| 4       | Create Feedback |
+
+DIA 7. Entity-módosítás
+
+Régen:
+
+@Entity
+↓
+Hibernate
+↓
+Adatbázis
+
+Most:
+
+@Entity
+↓
+SQL migráció
+↓
+Git
+↓
+Flyway
+↓
+Adatbázis
+
+
+Alul Minden módosítás visszakövethető.
+
+
+DIA 8 Flyway a Feedback alkalmazásban
+
+Mit kell megnézni? Jobbra mappa ikonok
+
+📂 pom.xml
+
+📂 application.yml
+
+📂 db/migration
+
+📂 generate_changelog.sh
+
+📂 flyway_schema_history   
+
+
+DIA 9 generate_changelog.sh
+
+Feladata:
+
+✅ migráció generálása
+
+✅ megfelelő fájlnév
+
+✅ sprint verzió
+
+✅ ticket szám
+
+Példa: V2.5.0__FB-123_add_email.sql
+
+Alul: a pontos névkonvenciót mindig a projekt szabályai szerint kell követni
+
+
+DIA 10 A Fejlesztési Folyamat: SmartArt folyamatábra
+
+Entity módosítás
+↓
+generate_changelog.sh
+↓
+SQL ellenőrzése
+↓
+Commit
+↓
+Code Review
+↓
+Merge
+↓
+
+Flyway lefut
+↓
+Production
+
+
+DIA 11: KÉRDÉSEK, KÖSZÖNÖM!
+
+
+

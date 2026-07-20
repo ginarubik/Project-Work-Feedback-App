@@ -1,0 +1,350 @@
+A Flyway és Adatbázis Migráció a Feedback alkalmazásban
+
+Prezentáció: 10–15 perc
+
+1. Címdia
+2. Agenda
+3. Mi az adatbázis migráció?
+4. Miért van rá szükség?
+5. Adatbázis migrációs eszközök összehasonlítása
+6. Flyway működése
+7. Baseline és a `flyway_schema_history`
+8. Entity módosítás Flyway használatával (folyamat ábra)
+9. Flyway a Feedback alkalmazásban
+10. `generate_changelog.sh` működése
+11. Jövőbeli fejlesztési folyamat
+12. Összefoglalás + Kérdések
+
+
+I. Adatbázis migráció
+
+1.Mit jelent az adatbázis migráció?
+
+az adatbázis szerkezetének (schema) verziókövetett módosítása. Ide tartozik például:
+új tábla, index létrehozása, oszlop hozzáadása és törlése, constraint módosítása, a meglévő adatok átalakítása)
+
+A cél, hogy az adatbázis szerkezete ugyanúgy verziózott legyen, mint a forráskód.
+
+2.Mikor van rá szükség?
+
+Szinte minden fejlesztési feladat során, amikor: új feature készül, új entity kerül be,módosul egy entity,új kapcsolat jön létre két tábla között,optimalizálni kell az adatbázist
+
+Példák:
+
+```
+User
+↓
+
+id
+name
+```
+
+később
+
+```
+User
+
+id
+name
+email
+```
+
+Az "email" mezőt migrációval lehet biztonságosan hozzáadni.
+
+3.Milyen eszközök léteznek erre?
+
+a.Flyway Előnyei:egyszerű,SQL alapú,könnyen átlátható,verziókövetett, a Spring Boot által támogatott
+
+Hátrányai: manuálisan kell SQL-t írni, komplex rollback nincs a Community verzióban
+
+b.Liquibase Előnyök: XML/YAML/JSON/SQL, rollback támogatás, sok extra funkció
+
+Hátrányok: bonyolultabb több konfigurációval
+
+c.Hibernate auto update
+
+```
+spring.jpa.hibernate.ddl-auto=update
+```
+
+Előnyök: nagyon gyors fejlesztés
+
+Hátrányok: nem verziózott, production környezetben nem ajánlott, nem reprodukálható
+
+II. Flyway
+
+## Mi a Flyway?
+
+egy adatbázis migrációs eszköz.
+
+Feladata: SQL migrációk futtatása,verziózás,sorrend biztosítása, minden környezetben ugyanazt az adatbázist létrehozni
+
+Hogyan működik? Minden migráció egy SQL fájl.
+
+Példa:
+
+```
+V1__Initial_schema.sql
+
+V2__Create_user_table.sql
+
+V3__Add_email_to_user.sql
+```
+
+Induláskor a Flyway:
+
+1. megnézi a flyway_schema_history táblát
+2. megkeresi a hiányzó migrációkat
+3. lefuttatja őket
+4. eltárolja az eredményt
+
+Mit jelent a baseline? Sok projekt már rendelkezik működő adatbázissal. Ilyenkor nem szeretnénk újra létrehozni minden táblát
+
+A baseline azt mondja: "Ettől a verziótól kezdve kezeli a Flyway az adatbázist."
+
+Példa:
+
+Meglévő adatbázis:
+
+```
+users
+feedback
+roles
+comments
+```
+
+Flyway bekötése után:
+
+```
+baseline version = 1
+```
+
+Ezután
+
+```
+V2__...
+V3__...
+V4__...
+```
+
+már normál migrációként futnak.
+
+Hogyan köthető be meglévő alkalmazásba?
+
+1. Flyway dependency
+2. baseline
+3. első migráció létrehozása
+4. flyway_schema_history létrejön
+5. ezután minden módosítás migrációval történik
+
+Hogyan változik az entity módosítása?
+
+Régen:
+
+```
+@Entity
+
+↓
+
+Hibernate update
+
+↓
+
+adatbázis automatikusan módosul
+```
+
+Flyway használatával:
+
+```
+Entity módosítás
+
+↓
+
+SQL migráció
+
+↓
+
+Git commit
+
+↓
+
+Flyway lefuttatja
+
+↓
+
+Entity működik
+```
+
+Így minden változás reprodukálható.
+
+III. Flyway a Feedback alkalmazásban
+
+projekt-specifikus, a pontos részleteket a repository alapján kell kitölteni
+
+Hogyan kerül bekötésre?
+
+Általában:
+
+Maven
+
+```xml
+flyway-core
+```
+
+vagy
+
+Gradle
+
+```
+implementation 'org.flywaydb:flyway-core'
+```
+
+Spring Boot automatikusan indításkor futtatja.
+
+Milyen beállításokat használ?
+
+Jellemzően:
+
+```
+spring.flyway.enabled=true
+
+spring.flyway.locations=classpath:db/migration
+
+spring.flyway.baseline-on-migrate=true
+```
+
+A pontos értékeket az `application.yml` vagy `application.properties` fájlból kell ellenőrizni.
+
+Mi a flyway_schema_history?
+
+Ez egy belső Flyway tábla.
+
+Tárolja: verzió,script neve,futás ideje,checksum,sikeres volt-e?
+
+Példa
+
+| Version | Description       |
+| ------- | ----------------- |
+| 1       | Baseline          |
+| 2       | Create user table |
+| 3       | Add email         |
+
+Ennek alapján tudja, hogy mely migrációk futottak le.
+
+Mi a generate_changelog.sh? Egy projektfüggő shell script.
+
+Általában arra szolgál, hogy: automatikusan elkészítse az SQL migrációt,megfelelő néven hozza létre,sprint verziót hozzáadja,ticket számot beleírja,egységes legyen a fájlok neve
+
+Ezt a repository alapján kell bemutatni.
+
+Milyen módosítások történnek?
+
+Érdemes 3-4 példát keresni a `db/migration` könyvtárból.
+
+Például: új tábla,új oszlop,constraint hozzáadása,index létrehozása
+
+Entity módosítása Flyway mellett
+
+Példa
+
+Régi entity
+
+```java
+private String name;
+```
+
+Új entity
+
+```java
+private String name;
+
+private String email;
+```
+
+Lépések
+
+1.
+
+Entity módosítás
+
+2.
+
+SQL migráció
+
+```sql
+ALTER TABLE users
+ADD COLUMN email varchar(255);
+```
+
+3.
+
+Tesztelés
+
+4.
+
+Commit
+
+
+IV. Hogyan használjuk a jövőben?
+
+Entity módosítása
+
+↓
+
+generate_changelog.sh futtatása
+
+↓
+
+SQL ellenőrzése
+
+↓
+Migráció neve
+
+Példa
+
+```
+V2.5.0__FB-123_add_email_to_user.sql
+```
+
+vagy
+
+```
+V15__SPRINT12_FB-123_add_email.sql
+```
+
+(a projekt szabályai szerint)
+
+↓
+Commit
+
+↓
+Code Review
+
+↓
+Merge
+
+↓
+
+a Flyway automatikusan lefut minden környezetben
+
+V. A Prezentáció felépítése (10–15 perc)
+
+1. Mi az adatbázis migráció? (2 perc)
+2. Miért van rá szükség? (1 perc)
+3. Flyway működése (3 perc)
+4. Baseline és `flyway_schema_history` (2 perc)
+5. Flyway a Feedback alkalmazásban (4 perc)
+6. Hogyan készítsünk új migrációt? (3 perc)
+7. Kérdések
+
+Mire lesz még szükséged a projektből?
+
+A feladat projekt-specifikus részeihez mérten különösen a Feedback appban használt Flyway konfigurációhoz képest érdemes megvizsgálni.
+
+* `pom.xml` vagy `build.gradle`
+* `application.yml` / `application.properties`
+* `db/migration` könyvtár
+* `generate_changelog.sh`
+* néhány meglévő migrációs SQL fájl
+
+Ezek alapján pontosan dokumentálható, hogyan van bekötve a Flyway a Feedback alkalmazásban, milyen beállításokat használ, és milyen migrációs konvenciókat követ a csapat.
